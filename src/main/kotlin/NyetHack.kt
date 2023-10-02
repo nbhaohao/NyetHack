@@ -4,6 +4,7 @@ fun main() {
     heroName = promptHeroName()
 //    changeNarratorMood()
     narrate("$heroName ${createTitle(heroName)}, heads to the town square")
+    visitTavern()
 }
 
 private fun promptHeroName(): String {
