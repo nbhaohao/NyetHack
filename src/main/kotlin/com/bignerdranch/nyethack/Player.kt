@@ -1,7 +1,23 @@
 package com.bignerdranch.nyethack
 
-class Player {
-    var name = "madrigal"
+class Player(
+    initialName: String,
+    val hometown: String = "Neversummer",
+    var healthPoints: Int,
+    val isImmortal: Boolean
+) {
+
+    constructor(name: String) : this(
+        initialName = name,
+        healthPoints = 100,
+        isImmortal = false
+    ) {
+        if (name.equals("Jason", ignoreCase = true)) {
+            healthPoints = 500
+        }
+    }
+
+    var name = initialName
         get() = field.replaceFirstChar { it.uppercase() }
         private set(value) {
             field = value.trim()
