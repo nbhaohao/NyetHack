@@ -1,3 +1,5 @@
+package com.bignerdranch.nyethack
+
 val player = Player()
 
 fun main() {
