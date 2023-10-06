@@ -8,10 +8,12 @@ fun main() {
     player = Player(playerName)
 //    changeNarratorMood()
     player.prophesize()
+    var currentRoom: Room = TownSquare()
     val mortality = if (player.isImmortal) "an immortal" else "a mortal"
     narrate("${player.name} of ${player.hometown}, ${player.title}, heads to the town square")
     narrate("${player.name}, $mortality, has ${player.healthPoints} health points")
-    visitTavern()
+    currentRoom.enterRoom()
+
     player.castFireball()
     player.prophesize()
 }
